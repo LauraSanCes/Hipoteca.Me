@@ -29,17 +29,23 @@ public class MainActivity extends AppCompatActivity
 
    public void onClickAmort(View v)
    {
+       Intent i = new Intent(this, Screen_amort.class);
 
+       startActivity(i);
    }
 
     public void onClickConver(View v)
     {
+        Intent i = new Intent(this, Screen_conver.class);
 
+        startActivity(i);
     }
 
     public void onClickCalc(View v)
     {
+        Intent i = new Intent(this, Screen_calculadora.class);
 
+        startActivity(i);
     }
 
     public void onClickExit(View v)
