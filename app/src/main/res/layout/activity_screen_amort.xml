@@ -7,19 +7,17 @@
     android:background="@drawable/fond_screens"
     tools:context=".Screen_amort">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="83dp"
-        android:layout_height="30dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="86dp" />
-
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="227dp"
-        android:layout_height="30dp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="85dp" />
-
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginRight="74dp"
+        android:onClick="dropDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
