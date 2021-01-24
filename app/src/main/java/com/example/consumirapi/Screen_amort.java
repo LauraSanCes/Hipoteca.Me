@@ -3,8 +3,10 @@ package com.example.consumirapi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Screen_amort extends AppCompatActivity {
 
@@ -23,6 +25,25 @@ public class Screen_amort extends AppCompatActivity {
 
         spinner_select.setAdapter(adapter);
 
-
     }
+
+    public void spinner_info(View a)
+    {
+
+        String seleccion = spinner_select.getSelectedItem().toString();
+
+
+        switch (seleccion)
+        {
+            case "Prestamo hipotecario":
+                Toast.makeText(this, "Prestamo hipotecario", Toast.LENGTH_SHORT).show();
+                break;
+            case "Prestamo personal":
+                Toast.makeText(this, "Prestamo personal", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        //tv1.setText(seleccion);
+    }
+
+
 }
