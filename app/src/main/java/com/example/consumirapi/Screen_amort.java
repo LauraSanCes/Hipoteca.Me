@@ -26,10 +26,9 @@ public class Screen_amort extends AppCompatActivity {
         spinner_select.setAdapter(adapter);
 
     }
-/*
-    public void spinner_info(View a)
-    {
 
+    public void spinnerClick(View view)
+    {
         String seleccion = spinner_select.getSelectedItem().toString();
 
 
@@ -45,7 +44,6 @@ public class Screen_amort extends AppCompatActivity {
         //tv1.setText(seleccion);
     }
 
- */
 
 
 }

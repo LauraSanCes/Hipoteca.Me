@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_screens"
+    android:onClick="spinnerClick"
     tools:context=".Screen_amort">
 
     <Spinner
@@ -16,7 +17,7 @@
         android:layout_marginTop="116dp"
         android:layout_marginEnd="31dp"
         android:layout_marginRight="31dp"
-        android:onClick="spinner_info"
+        android:onClick="spinnerClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
