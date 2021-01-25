@@ -8,17 +8,48 @@
     android:onClick="spinnerClick"
     tools:context=".Screen_amort">
 
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="318dp"
+        android:layout_height="59dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="414dp" />
+
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:onClick="spinnerClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="318dp"
+        android:layout_height="59dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="492dp"
+        android:layout_height="237dp"
+        app:srcCompat="@drawable/Tipo_Prestamo"
+        tools:layout_editor_absoluteX="-41dp"
+        tools:layout_editor_absoluteY="-75dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="863dp"
+        android:layout_height="246dp"
+        app:srcCompat="@drawable/cantidad"
+        tools:layout_editor_absoluteX="-226dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="463dp"
+        android:layout_height="302dp"
+        app:srcCompat="@drawable/cuotas"
+        tools:layout_editor_absoluteX="-26dp"
+        tools:layout_editor_absoluteY="215dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
