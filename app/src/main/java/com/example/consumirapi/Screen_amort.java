@@ -54,7 +54,7 @@ public class Screen_amort extends AppCompatActivity {
     } //End onCreate
 
 //TODO terminar diseño pantalla y programar componentes
-//TODO añadir los rotulos recortados
+
 
 
 }
