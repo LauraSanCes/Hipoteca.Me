@@ -21,7 +21,7 @@ public class Screen_amort extends AppCompatActivity {
         setContentView(R.layout.activity_screen_amort);
 
         spinner_select = findViewById(R.id.spinner);
-        txt_drop = findViewById(R.id.txtv);
+        //txt_drop = findViewById(R.id.txtv);
 
 
         final String[] opciones = {"Prestamo hipotecario", "Prestamo personal"};
@@ -35,12 +35,12 @@ public class Screen_amort extends AppCompatActivity {
                 // get selected item and assign to textview
                 // ex: textView.setText(spinner.getSelectedItem().toString());
 
-               if (spinner_select.getSelectedItemPosition() == 0)
+             /*  if (spinner_select.getSelectedItemPosition() == 0)
                {
                    txt_drop.setText("Prestamo hipotecario");
                } else {
                    txt_drop.setText("Prestamo personal");
-               }
+               }*/
 
             }
 
