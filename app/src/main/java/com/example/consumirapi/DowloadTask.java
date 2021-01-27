@@ -12,6 +12,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class DowloadTask extends AsyncTask<String, Void, Void>
 {
@@ -38,22 +40,17 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             String jsonData = response.body().string();
             System.out.println(jsonData);
 //-----------------------------------------------------------------------------------Esto parece fucionar tambien--------------------------------------------------------------------------------//
+
+            //------------------------------------------------------------------Aqui es donde comienza el error, esta al crear el jsonArray--------------------------------------------------------//
+
+
             JSONArray jsonArray = new JSONArray(jsonData);
-
-
-            //------------------------------------------------------------------Aqui es donde comienza el error, este debe estar en el array--------------------------------------------------------//
-
-           /* JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length() ; i++)
             {
                 JSONObject valor = jsonArray.getJSONObject(i);
                 System.out.println(valor.getString("EUR"));
-
             }
-
-            */
-
         }
         catch (IOException | JSONException e)
         {
