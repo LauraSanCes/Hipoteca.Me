@@ -34,23 +34,28 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             Response response = client.newCall(request).execute();
 
             System.out.println(response);
-//-------------------------------------------------------------------------------HASTA AQUI FUNCIONA, COGE LA API-------------------------------------------------------------------------------------
-           /* String jsonData = response.body().string();
+//-------------------------------------------------------------------------------HASTA AQUI FUNCIONA, COGE LA API-------------------------------------------------------------------------------------//
+            String jsonData = response.body().string();
+            System.out.println(jsonData);
+//-----------------------------------------------------------------------------------Esto parece fucionar tambien--------------------------------------------------------------------------------//
             JSONArray jsonArray = new JSONArray(jsonData);
+
+
+            //------------------------------------------------------------------Aqui es donde comienza el error, este debe estar en el array--------------------------------------------------------//
+
+           /* JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length() ; i++)
             {
                 JSONObject valor = jsonArray.getJSONObject(i);
-                //System.out.println(valor.getString("rates"));
-                // System.out.println(equipo.getString("squad_points"));
-                Log.i("Hola: ", "La moneda es:  " + valor.getString("base"));
+                System.out.println(valor.getString("EUR"));
+
             }
 
             */
 
-
         }
-        catch (IOException e)
+        catch (IOException | JSONException e)
         {
             e.printStackTrace();
         }
