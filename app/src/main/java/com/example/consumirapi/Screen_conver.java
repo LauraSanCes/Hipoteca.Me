@@ -14,6 +14,13 @@ public class Screen_conver extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_conver);
 
+        DowloadTask task = new DowloadTask();
+        task.execute("https://currencyscoop.p.rapidapi.com/latest");
+
+
+        //------------------------------------------------------------------------------
+
+
         txt_result = findViewById(R.id.editText_result);
 
 
