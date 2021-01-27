@@ -43,14 +43,39 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
 
             //------------------------------------------------------------------Aqui es donde comienza el error, esta al crear el jsonArray--------------------------------------------------------//
 
+           //Me parece que el error se encuentra en que en nuestra API no usamos hay ningun JSOArray, sino que deberiamos usar directamente el JSONObject
 
-            JSONArray jsonArray = new JSONArray(jsonData);
+           /* JSONObject valor = new JSONObject(jsonData);
+            System.out.println(valor);
+            */
+       JSONObject jsonObject = new JSONObject(jsonData);
+            System.out.println(jsonObject);
+
+     /*  JSONArray monedas = jsonObject.getJSONArray("base");
+
+            for (int i = 0; i < monedas.length() ; i++)
+            {
+                JSONObject c = monedas.getJSONObject(i);
+
+                String dinero = c.getString("rates");
+
+                System.out.println(dinero);
+
+            }
+
+      */
+
+
+
+/*            JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length() ; i++)
             {
                 JSONObject valor = jsonArray.getJSONObject(i);
                 System.out.println(valor.getString("EUR"));
             }
+
+ */
         }
         catch (IOException | JSONException e)
         {
