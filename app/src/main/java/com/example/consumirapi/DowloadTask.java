@@ -32,7 +32,10 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
         try
         {
             Response response = client.newCall(request).execute();
-            String jsonData = response.body().string();
+
+            System.out.println(response);
+//-------------------------------------------------------------------------------HASTA AQUI FUNCIONA, COGE LA API-------------------------------------------------------------------------------------
+           /* String jsonData = response.body().string();
             JSONArray jsonArray = new JSONArray(jsonData);
 
             for (int i = 0; i < jsonArray.length() ; i++)
@@ -43,9 +46,11 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
                 Log.i("Hola: ", "La moneda es:  " + valor.getString("base"));
             }
 
+            */
+
 
         }
-        catch (IOException | JSONException e)
+        catch (IOException e)
         {
             e.printStackTrace();
         }
