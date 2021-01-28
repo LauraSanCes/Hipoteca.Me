@@ -1,7 +1,10 @@
 package com.example.consumirapi;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
+
+import androidx.annotation.RequiresApi;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -14,11 +17,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class DowloadTask extends AsyncTask<String, Void, Void>
 {
 
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected Void doInBackground(String... endPoint)
     {
@@ -35,29 +40,48 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
         {
             Response response = client.newCall(request).execute();
 
-            System.out.println(response);
+            //System.out.println(response);
 //-------------------------------------------------------------------------------HASTA AQUI FUNCIONA, COGE LA API-------------------------------------------------------------------------------------//
             String jsonData = response.body().string();
-            System.out.println(jsonData);
+            //Log.i("Respuesta", jsonData);
 //-----------------------------------------------------------------------------------Esto parece fucionar tambien--------------------------------------------------------------------------------//
 
             //------------------------------------------------------------------Aqui es donde comienza el error, esta al crear el jsonArray--------------------------------------------------------//
 //------------------------------------------------Aqui es donde meto el object en el Array-----------------------------------
-            JSONObject json = new JSONObject();
-            JSONArray jarray = new JSONArray();
-            jarray.put(jsonData);
+            JSONObject json = new JSONObject(jsonData);
 
-            System.out.println(jarray);
-            json.put("insert",jarray);
-            System.out.println(json);
+            //System.out.println(json);
+            JSONObject respuestaResponse= json.getJSONObject("response");
+            Iterator i = respuestaResponse.keys();
+            JSONArray jsonArrayResponse = new JSONArray();
+
+            while (i.hasNext())
+            {
+                String key = (String) i.next();
+                jsonArrayResponse.put(respuestaResponse.get(key));
+            }
+
+            JSONObject respuestaRates= (JSONObject) jsonArrayResponse.get(2);
+            Iterator j = respuestaRates.keys();
+            JSONArray jsonArrayRates = new JSONArray();
+
+            while (j.hasNext())
+            {
+                String key = (String) j.next();
+                jsonArrayRates.put(respuestaRates.get(key));
+            }
+            for (int k = 0; k < jsonArrayRates.length() ; k++) {
+                System.out.println(jsonArrayRates.get(k));
+            }
+
 
            //Me parece que el error se encuentra en que en nuestra API no usamos hay ningun JSOArray, sino que deberiamos usar directamente el JSONObject
 
            /* JSONObject valor = new JSONObject(jsonData);
             System.out.println(valor);
             */
-       JSONObject jsonObject = new JSONObject(jsonData);
-            System.out.println(jsonObject);
+       //JSONObject jsonObject = new JSONObject(jsonData);
+            //System.out.println(jsonObject);
 
      /*  JSONArray monedas = jsonObject.getJSONArray("base");
 
