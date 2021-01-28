@@ -42,6 +42,14 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
 //-----------------------------------------------------------------------------------Esto parece fucionar tambien--------------------------------------------------------------------------------//
 
             //------------------------------------------------------------------Aqui es donde comienza el error, esta al crear el jsonArray--------------------------------------------------------//
+//------------------------------------------------Aqui es donde meto el object en el Array-----------------------------------
+            JSONObject json = new JSONObject();
+            JSONArray jarray = new JSONArray();
+            jarray.put(jsonData);
+
+            System.out.println(jarray);
+            json.put("insert",jarray);
+            System.out.println(json);
 
            //Me parece que el error se encuentra en que en nuestra API no usamos hay ningun JSOArray, sino que deberiamos usar directamente el JSONObject
 
@@ -83,4 +91,10 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
         }
         return null;
     }
-}
+}/*
+    JSONObject json = new JSONObject
+    JSONArray jarray = new JSONArray
+jarray.put("primer insert", "segundo insert"...)
+        json.put("insert",jarray);
+
+ */
