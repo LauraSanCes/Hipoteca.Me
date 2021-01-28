@@ -72,9 +72,24 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
                 String key = (String) j.next();
                 jsonArrayRates.put(respuestaRates.get(key));
             }
-            for (int k = 0; k < jsonArrayRates.length() ; k++) {
-                System.out.println(jsonArrayRates.get(k));
+            for (int k = 0; k < jsonArrayRates.length() ; k++)
+            {
+             // System.out.println(jsonArrayRates.get(k));
+
+               /* int num = 2;
+
+                int calculo = (int) jsonArrayRates.get(1) * num;
+
+                System.out.println(calculo);
+
+                */
+
+
+
             }
+            int calculo = Integer.parseInt ((String) jsonArrayRates.get(2)) * 2;
+            System.out.println(calculo);
+
 
 
 
