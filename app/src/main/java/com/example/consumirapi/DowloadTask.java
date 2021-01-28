@@ -74,7 +74,7 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             }
             for (int k = 0; k < jsonArrayRates.length() ; k++)
             {
-             // System.out.println(jsonArrayRates.get(k));
+              System.out.println(jsonArrayRates.get(k));
 
                /* int num = 2;
 
@@ -87,8 +87,10 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
 
 
             }
-            int calculo = Integer.parseInt ((String) jsonArrayRates.get(2)) * 2;
+          /*  int calculo = Integer.parseInt ((String) jsonArrayRates.get(2)) * 2;
             System.out.println(calculo);
+
+           */
 
 
 
