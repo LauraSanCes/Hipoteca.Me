@@ -58,6 +58,15 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             Iterator j = respuestaRates.keys();
             JSONArray jsonArrayRates = new JSONArray();
 
+
+            //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            //System.out.println(jsonArrayRates); //-------------el array aqui esta vacio
+
+            //-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
             while (j.hasNext())
             {
                 String key = (String) j.next();
@@ -66,6 +75,8 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             for (int k = 0; k < jsonArrayRates.length() ; k++) {
                 System.out.println(jsonArrayRates.get(k));
             }
+
+
 
         }
         catch (IOException | JSONException e)
