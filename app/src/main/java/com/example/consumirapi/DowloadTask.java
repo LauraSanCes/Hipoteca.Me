@@ -39,18 +39,11 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
         try
         {
             Response response = client.newCall(request).execute();
-
-            //System.out.println(response);
-//-------------------------------------------------------------------------------HASTA AQUI FUNCIONA, COGE LA API-------------------------------------------------------------------------------------//
             String jsonData = response.body().string();
-            //Log.i("Respuesta", jsonData);
-//-----------------------------------------------------------------------------------Esto parece fucionar tambien--------------------------------------------------------------------------------//
 
-            //------------------------------------------------------------------Aqui es donde comienza el error, esta al crear el jsonArray--------------------------------------------------------//
-//------------------------------------------------Aqui es donde meto el object en el Array-----------------------------------
             JSONObject json = new JSONObject(jsonData);
 
-            //System.out.println(json);
+
             JSONObject respuestaResponse= json.getJSONObject("response");
             Iterator i = respuestaResponse.keys();
             JSONArray jsonArrayResponse = new JSONArray();
@@ -74,40 +67,6 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
                 System.out.println(jsonArrayRates.get(k));
             }
 
-
-           //Me parece que el error se encuentra en que en nuestra API no usamos hay ningun JSOArray, sino que deberiamos usar directamente el JSONObject
-
-           /* JSONObject valor = new JSONObject(jsonData);
-            System.out.println(valor);
-            */
-       //JSONObject jsonObject = new JSONObject(jsonData);
-            //System.out.println(jsonObject);
-
-     /*  JSONArray monedas = jsonObject.getJSONArray("base");
-
-            for (int i = 0; i < monedas.length() ; i++)
-            {
-                JSONObject c = monedas.getJSONObject(i);
-
-                String dinero = c.getString("rates");
-
-                System.out.println(dinero);
-
-            }
-
-      */
-
-
-
-/*            JSONArray jsonArray = new JSONArray(jsonData);
-
-            for (int i = 0; i < jsonArray.length() ; i++)
-            {
-                JSONObject valor = jsonArray.getJSONObject(i);
-                System.out.println(valor.getString("EUR"));
-            }
-
- */
         }
         catch (IOException | JSONException e)
         {
@@ -115,10 +74,4 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
         }
         return null;
     }
-}/*
-    JSONObject json = new JSONObject
-    JSONArray jarray = new JSONArray
-jarray.put("primer insert", "segundo insert"...)
-        json.put("insert",jarray);
-
- */
+}
