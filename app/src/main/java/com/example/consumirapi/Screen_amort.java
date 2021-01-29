@@ -43,11 +43,11 @@ public class Screen_amort extends AppCompatActivity {
 
                if (spinner_select.getSelectedItemPosition() == 0)
                {
-                   txt_tin.setText("3%");
-                   txt_tae.setText("5%");
-               } else {
                    txt_tin.setText("2%");
                    txt_tae.setText("4%");
+               } else {
+                   txt_tin.setText("3%");
+                   txt_tae.setText("5%");
                }
 
             }
@@ -73,14 +73,27 @@ public void calcular(View v)
    int cuotas = Integer.parseInt(cuotas_txt);
 
 
-   if((cantidad < 0 || cantidad > 400000) || (cuotas < 0 || cuotas > 240))
-   {
-       Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT).show();
-   }
 
+    if (spinner_select.getSelectedItemPosition() == 0) {
+        //Toast.makeText(this, "Prestamo hipotecario", Toast.LENGTH_SHORT).show();
 
-}
+        if ((cantidad < 30000 || cantidad > 500000) || (cuotas < 60 || cuotas > 360)) {
+            Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cantidad MIN = 30.000 - Cantidad MAX = 500.000", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cuotas MIN = 60 - Cuotas MAX = 360", Toast.LENGTH_SHORT).show();
+        } else {
+            //code change
+        }
+    } else {
+        //Toast.makeText(this, "Prestamo personal", Toast.LENGTH_SHORT).show();
 
-
-
-}
+        if ((cantidad < 3000 || cantidad > 20000) || (cuotas < 12 || cuotas > 84)) {
+            Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cantidad MIN = 3.000 - Cantidad MAX = 20.000", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cuotas MIN = 12 - Cuotas MAX = 84", Toast.LENGTH_SHORT).show();
+        } else {
+            //code change
+        }
+    }
+ }
+} //End class

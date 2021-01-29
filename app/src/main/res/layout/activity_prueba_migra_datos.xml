@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_screens"
+    tools:context=".Prueba_migraDatos">
+
+    <TextView
+        android:id="@+id/tv_cant"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:hint="Cantidad Migrada"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_cuot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cuot"
+        android:layout_width="162dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="290dp"
+        android:gravity="center"
+        android:hint="Cuotas Migradas"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cant" />
+</androidx.constraintlayout.widget.ConstraintLayout>
