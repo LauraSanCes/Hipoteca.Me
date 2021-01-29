@@ -76,12 +76,19 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             {
              // System.out.println(jsonArrayRates.get(k));
 
-                double num = (double) jsonArrayRates.get(1);
+             /*  double num = (double) jsonArrayRates.get(1);
                 double num2 = 2F;
 
                 double resul =  num * num2;
 
                 System.out.println(resul);
+
+              */
+
+              //double num = (double) jsonArrayRates.get(k);
+
+
+
             }
         }
         catch (IOException | JSONException e)

@@ -12,16 +12,19 @@ import android.widget.Spinner;
 public class Screen_conver extends AppCompatActivity {
 
     EditText txt_result;
+    Spinner origen;
+    Spinner end;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        Spinner origen;
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_conver);
 
         origen = findViewById(R.id.drop_from);
+        end = findViewById(R.id.drop_to);
 
 
         DowloadTask task = new DowloadTask();
@@ -38,25 +41,52 @@ public class Screen_conver extends AppCompatActivity {
 
         //---------------------------------------------------------------------------------
 
-        final String[] opciones = {"USD", "EUR", "GBP", "INR", "AUD", "CAD", "SGD", "CHF", "MYR", "JPY"};
+        final String[] opciones = {"USD", "EUR", "GBP", "INR", "AUD", "CAD", "SGD", "CHF", "MYR", "JPY", "CNY"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, opciones);
 
-        origen.setAdapter(adapter);
+        final String[] opciones2 = {"USD", "EUR", "GBP", "INR", "AUD", "CAD", "SGD", "CHF", "MYR", "JPY", "CNY"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner_item, opciones2);
 
-        origen.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+        origen.setAdapter(adapter);
+        end.setAdapter(adapter2);
+
+
+        origen.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
 
+
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // handle if you'd like to
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+
             }
         });
 
+
+
+        end.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+
+            }
+        });
 
     } //End onCreate
 
