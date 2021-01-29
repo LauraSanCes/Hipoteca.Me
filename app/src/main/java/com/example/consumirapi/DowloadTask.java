@@ -19,14 +19,22 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DowloadTask extends AsyncTask<String, Void, Void>
+public class DowloadTask extends AsyncTask<String, Void, Double>
 {
 
-   public static double resul;
+
+   static double num;
+   static double num2;
+   static double resul;
+
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+
     @Override
-    protected  Void doInBackground(String... endPoint)
+
+    protected  Double doInBackground(String... endPoint)
     {
         OkHttpClient client = new OkHttpClient();
 
@@ -77,25 +85,37 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             {
              // System.out.println(jsonArrayRates.get(k));
 
-               double num = (double) jsonArrayRates.get(1);
-                double num2 = 2F;
-
-               resul =  num * num2;
-
                 //System.out.println(resul);
 
-
-
               //double num = (double) jsonArrayRates.get(k);
-
-
+                num = (double) jsonArrayRates.get(1);
+                num2 = 2F;
 
             }
+
+            resul =  num * num2;
+            System.out.println(resul);
+
         }
         catch (IOException | JSONException e)
         {
             e.printStackTrace();
         }
-        return null;
+
+        return resul;
     }
+
+    @Override
+    protected void onPostExecute(Double aDouble)
+    {
+        super.onPostExecute(aDouble);
+        Screen_conver.tareaTerminada(aDouble);
+    }
+
+
+
+
+
+
+
 }

@@ -2,6 +2,7 @@ package com.example.consumirapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,11 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import javax.xml.transform.Result;
+
 public class Screen_conver extends AppCompatActivity {
 
     EditText txt_result;
     Spinner origen;
     Spinner end;
+    final String resul = String.valueOf(DowloadTask.resul);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -26,11 +30,12 @@ public class Screen_conver extends AppCompatActivity {
         origen = findViewById(R.id.drop_from);
         end = findViewById(R.id.drop_to);
 
-        final String resul = String.valueOf(DowloadTask.resul);
+
 
 
         DowloadTask task = new DowloadTask();
         task.execute("https://currencyscoop.p.rapidapi.com/latest");
+
 
         //---------------------------------------------------------------------------------
 
@@ -60,8 +65,10 @@ public class Screen_conver extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
-                //System.out.println(resul);
-                txt_result.setText(resul);
+               // System.out.println("El resultado es: " + resul);
+              //  txt_result.setText(resul);
+
+
 
             }
 
@@ -92,6 +99,12 @@ public class Screen_conver extends AppCompatActivity {
         });
 
     } //End onCreate
+
+    public static void tareaTerminada(Double resultado)
+    {
+        double ejemplo = resultado.doubleValue();
+        txt_result.setText((int) ejemplo);
+    }
 
 
 
