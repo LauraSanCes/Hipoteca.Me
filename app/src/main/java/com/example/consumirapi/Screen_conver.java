@@ -15,10 +15,10 @@ import javax.xml.transform.Result;
 public class Screen_conver extends AppCompatActivity
 {
 
-   static EditText txt_result;
+    EditText txt_result;
     Spinner origen;
     Spinner end;
-    //final String resul = String.valueOf(DowloadTask.resul);
+    final String resul = String.valueOf(DowloadTask.resul);
 
 
 
@@ -36,19 +36,14 @@ public class Screen_conver extends AppCompatActivity
 
 
 
-
         DowloadTask task = new DowloadTask();
         task.execute("https://currencyscoop.p.rapidapi.com/latest");
 
 
         //---------------------------------------------------------------------------------
 
-
-
-
-
         txt_result.setFocusable(false);
-        txt_result.setText("98");
+      //  txt_result.setText("98");
 
         //---------------------------------------------------------------------------------
 
@@ -69,8 +64,8 @@ public class Screen_conver extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
-               // System.out.println("El resultado es: " + resul);
-              //  txt_result.setText(resul);
+              // System.out.println("El resultado es: " + resul);
+               txt_result.setText(resul);
 
 
 
@@ -104,10 +99,4 @@ public class Screen_conver extends AppCompatActivity
 
     } //End onCreate
 
-    public static void tareaTerminada(Double resultado)
-    {
-
-        double ejemplo = resultado.doubleValue();
-        txt_result.setText((int) ejemplo);
-    }
     }

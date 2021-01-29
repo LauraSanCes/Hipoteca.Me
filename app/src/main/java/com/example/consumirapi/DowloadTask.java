@@ -1,5 +1,6 @@
 package com.example.consumirapi;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.util.Log;
@@ -19,13 +20,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DowloadTask extends AsyncTask<String, Void, Double>
+public class DowloadTask extends AsyncTask<String, Void, Void>
 {
 
 
    static double num;
    static double num2;
-   static double resul;
+  public  static double resul;
 
 
 
@@ -34,7 +35,7 @@ public class DowloadTask extends AsyncTask<String, Void, Double>
 
     @Override
 
-    protected  Double doInBackground(String... endPoint)
+    public  Void doInBackground(String... endPoint)
     {
         OkHttpClient client = new OkHttpClient();
 
@@ -44,6 +45,7 @@ public class DowloadTask extends AsyncTask<String, Void, Double>
                 .addHeader("x-rapidapi-key", "f3b4031890msh7bdd9d4ec3754c3p1b3801jsn0c74a3997fab")
                 .addHeader("x-rapidapi-host", "currencyscoop.p.rapidapi.com")
                 .build();
+
 
         try
         {
@@ -68,31 +70,25 @@ public class DowloadTask extends AsyncTask<String, Void, Double>
             JSONArray jsonArrayRates = new JSONArray();
 
 
-            //-----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-            //System.out.println(jsonArrayRates); //-------------el array aqui esta vacio
-
-            //-----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
             while (j.hasNext())
             {
                 String key = (String) j.next();
                 jsonArrayRates.put(respuestaRates.get(key));
             }
-            for (int k = 0; k < jsonArrayRates.length() ; k++)
+
+           for (int k = 0; k < jsonArrayRates.length() ; k++)
             {
              // System.out.println(jsonArrayRates.get(k));
 
                 //System.out.println(resul);
 
               //double num = (double) jsonArrayRates.get(k);
+
+
                 num = (double) jsonArrayRates.get(1);
                 num2 = 2F;
 
             }
-
             resul =  num * num2;
             System.out.println(resul);
 
@@ -102,20 +98,7 @@ public class DowloadTask extends AsyncTask<String, Void, Double>
             e.printStackTrace();
         }
 
-        return resul;
+        return null;
     }
-
-    @Override
-    protected void onPostExecute(Double aDouble)
-    {
-        super.onPostExecute(aDouble);
-        Screen_conver.tareaTerminada(aDouble);
-    }
-
-
-
-
-
-
 
 }
