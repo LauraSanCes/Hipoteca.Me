@@ -82,13 +82,7 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
                 double resul =  num * num2;
 
                 System.out.println(resul);
-
-
-
             }
-
-
-
         }
         catch (IOException | JSONException e)
         {
