@@ -12,12 +12,15 @@ import android.widget.Spinner;
 
 import javax.xml.transform.Result;
 
-public class Screen_conver extends AppCompatActivity {
+public class Screen_conver extends AppCompatActivity
+{
 
-    EditText txt_result;
+   static EditText txt_result;
     Spinner origen;
     Spinner end;
-    final String resul = String.valueOf(DowloadTask.resul);
+    //final String resul = String.valueOf(DowloadTask.resul);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,6 +32,7 @@ public class Screen_conver extends AppCompatActivity {
 
         origen = findViewById(R.id.drop_from);
         end = findViewById(R.id.drop_to);
+        txt_result = findViewById(R.id.editText_result);
 
 
 
@@ -40,7 +44,7 @@ public class Screen_conver extends AppCompatActivity {
         //---------------------------------------------------------------------------------
 
 
-        txt_result = findViewById(R.id.editText_result);
+
 
 
         txt_result.setFocusable(false);
@@ -102,10 +106,8 @@ public class Screen_conver extends AppCompatActivity {
 
     public static void tareaTerminada(Double resultado)
     {
+
         double ejemplo = resultado.doubleValue();
         txt_result.setText((int) ejemplo);
     }
-
-
-
     }
