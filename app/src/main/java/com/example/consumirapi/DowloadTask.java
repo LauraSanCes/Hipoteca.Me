@@ -22,10 +22,11 @@ import java.util.Iterator;
 public class DowloadTask extends AsyncTask<String, Void, Void>
 {
 
+   public static double resul;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
-    protected Void doInBackground(String... endPoint)
+    protected  Void doInBackground(String... endPoint)
     {
         OkHttpClient client = new OkHttpClient();
 
@@ -76,14 +77,14 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
             {
              // System.out.println(jsonArrayRates.get(k));
 
-             /*  double num = (double) jsonArrayRates.get(1);
+               double num = (double) jsonArrayRates.get(1);
                 double num2 = 2F;
 
-                double resul =  num * num2;
+               resul =  num * num2;
 
-                System.out.println(resul);
+                //System.out.println(resul);
 
-              */
+
 
               //double num = (double) jsonArrayRates.get(k);
 

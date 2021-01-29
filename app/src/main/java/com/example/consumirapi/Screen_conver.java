@@ -26,6 +26,8 @@ public class Screen_conver extends AppCompatActivity {
         origen = findViewById(R.id.drop_from);
         end = findViewById(R.id.drop_to);
 
+        final String resul = String.valueOf(DowloadTask.resul);
+
 
         DowloadTask task = new DowloadTask();
         task.execute("https://currencyscoop.p.rapidapi.com/latest");
@@ -58,14 +60,15 @@ public class Screen_conver extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
-
+                //System.out.println(resul);
+                txt_result.setText(resul);
 
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent)
             {
-
+                    //Apriori va a estar vacio
             }
         });
 
@@ -84,7 +87,7 @@ public class Screen_conver extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent)
             {
-
+                //Apriori va a estar vacio
             }
         });
 
