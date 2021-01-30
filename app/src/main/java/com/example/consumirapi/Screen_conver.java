@@ -22,6 +22,9 @@ public class Screen_conver extends AppCompatActivity
     static Spinner origen;
     static Spinner end;
 
+    static Double Primercalculo;
+    static Double Segundocalculo;
+
     static Context context;
 
     static ArrayList<Object> valores = new ArrayList<Object>();
@@ -90,9 +93,12 @@ public class Screen_conver extends AppCompatActivity
                 else if(origen.getSelectedItemPosition() == 1)
                 {
 
+                    Primercalculo = 1 / (double) valores.get(1);
+                    System.out.println(Primercalculo);
+
+                  //  txt_result.setText(String.valueOf(Primercalculo));
+
                     // txt_result.setText(String.valueOf(valores.get(1)));
-
-
 
                 }
 
@@ -114,7 +120,25 @@ public class Screen_conver extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
+                if (end.getSelectedItemPosition() == 0)
+                {
+                    txt_result.setText(String.valueOf(valores.get(0)));
+                }
+                else if(end.getSelectedItemPosition() == 1)
+                {
 
+                    txt_result.setText(String.valueOf(valores.get(1)));
+
+                }
+                else if(end.getSelectedItemPosition() == 2)
+                {
+                    System.out.println("-----------------------------------------------------");
+
+                    Segundocalculo = Primercalculo * (double) valores.get(2);
+                    System.out.println(Segundocalculo);
+                    txt_result.setText(String.valueOf(Segundocalculo));
+
+                }
 
             }
 
