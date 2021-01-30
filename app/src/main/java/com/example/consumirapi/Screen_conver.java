@@ -18,20 +18,18 @@ import java.util.ArrayList;
 public class Screen_conver extends AppCompatActivity
 {
 
-    EditText txt_result;
+    static EditText txt_result;
     Spinner origen;
     Spinner end;
-   // static Double resul = (DowloadTask.resul);
 
     static Context context;
 
     static ArrayList<Object> valores = new ArrayList<Object>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_conver);
 
@@ -43,13 +41,13 @@ public class Screen_conver extends AppCompatActivity
 //---------------------------------------------------------------------------
         DowloadTask task = new DowloadTask();
         task.execute("https://currencyscoop.p.rapidapi.com/latest");
-
-
-        //---------------------------------------------------------------------------------
-
+//---------------------------------------------------------------------------------
         txt_result.setFocusable(false);
-      //  txt_result.setText("98");
-      //  txt_result.setText(resul);
+//---------------------------------------------------------------------------------
+
+//        txt_result.setText((CharSequence) valores.get(0));
+
+       // System.out.println(valores.get(0));
 
 
 
@@ -72,8 +70,6 @@ public class Screen_conver extends AppCompatActivity
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
-
-              // System.out.println("El resultado es: " + resul);
 
 
 
@@ -121,7 +117,12 @@ public class Screen_conver extends AppCompatActivity
             }
 
         }
-        Log.i("TAG", "Estos son los valores: " + valores);
+        //Log.i("TAG", "Estos son los valores: " + valores);
+
+       //System.out.println(valores.get(0)); //imprime los valores correctos segun el numero del array que le asigne
+
+        txt_result.setText(String.valueOf(valores.get(3)));  //ENTRAN LOS NUMEROS EN EL EMULADOR
+
     }
 
     }
