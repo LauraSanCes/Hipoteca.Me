@@ -115,12 +115,13 @@ public class Screen_conver extends AppCompatActivity
         {
             try {
                 valores.add(DowloadTask.jsonArrayRates.get(i));
-                Log.i("TAG", "Estos son los valores: " + valores);
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
         }
+        Log.i("TAG", "Estos son los valores: " + valores);
     }
 
     }
