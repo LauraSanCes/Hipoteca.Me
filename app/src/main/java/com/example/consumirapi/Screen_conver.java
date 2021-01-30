@@ -19,8 +19,8 @@ public class Screen_conver extends AppCompatActivity
 {
 
     static EditText txt_result;
-    Spinner origen;
-    Spinner end;
+    static Spinner origen;
+    static Spinner end;
 
     static Context context;
 
@@ -45,20 +45,32 @@ public class Screen_conver extends AppCompatActivity
         txt_result.setFocusable(false);
 //---------------------------------------------------------------------------------
 
-//        txt_result.setText((CharSequence) valores.get(0));
-
-       // System.out.println(valores.get(0));
+    } //End onCreate
 
 
+    static void prueba()
+    {
+        for (int i = 0; i < DowloadTask.jsonArrayRates.length() ; i++)
+        {
+            try {
+                valores.add(DowloadTask.jsonArrayRates.get(i));
 
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
-        //---------------------------------------------------------------------------------
+        }
+        //Log.i("TAG", "Estos son los valores: " + valores);
+
+       //System.out.println(valores.get(0)); //imprime los valores correctos segun el numero del array que le asigne
+
+        txt_result.setText(String.valueOf(valores.get(1)));  //ENTRAN LOS NUMEROS EN EL EMULADOR
 
         final String[] opciones = {"USD", "EUR", "GBP", "INR", "AUD", "CAD", "SGD", "CHF", "MYR", "JPY", "CNY"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, opciones);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, R.layout.spinner_item, opciones);
 
         final String[] opciones2 = {"USD", "EUR", "GBP", "INR", "AUD", "CAD", "SGD", "CHF", "MYR", "JPY", "CNY"};
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner_item, opciones2);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(context, R.layout.spinner_item, opciones2);
 
 
         origen.setAdapter(adapter);
@@ -71,7 +83,18 @@ public class Screen_conver extends AppCompatActivity
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
 
+                if (origen.getSelectedItemPosition() == 0)
+                {
+                    txt_result.setText(String.valueOf(valores.get(0)));
+                }
+                else if(origen.getSelectedItemPosition() == 1)
+                {
 
+                    // txt_result.setText(String.valueOf(valores.get(1)));
+
+
+
+                }
 
 
             }
@@ -79,7 +102,7 @@ public class Screen_conver extends AppCompatActivity
             @Override
             public void onNothingSelected(AdapterView<?> parent)
             {
-                    //Apriori va a estar vacio
+                //Apriori va a estar vacio
             }
         });
 
@@ -102,26 +125,8 @@ public class Screen_conver extends AppCompatActivity
             }
         });
 
-    } //End onCreate
 
 
-    static void prueba()
-    {
-        for (int i = 0; i < DowloadTask.jsonArrayRates.length() ; i++)
-        {
-            try {
-                valores.add(DowloadTask.jsonArrayRates.get(i));
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-        }
-        //Log.i("TAG", "Estos son los valores: " + valores);
-
-       //System.out.println(valores.get(0)); //imprime los valores correctos segun el numero del array que le asigne
-
-        txt_result.setText(String.valueOf(valores.get(3)));  //ENTRAN LOS NUMEROS EN EL EMULADOR
 
     }
 
