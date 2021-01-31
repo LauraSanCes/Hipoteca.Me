@@ -2,6 +2,7 @@ package com.example.consumirapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -43,11 +44,11 @@ public class Screen_amort extends AppCompatActivity {
 
                if (spinner_select.getSelectedItemPosition() == 0)
                {
-                   txt_tin.setText("2%");
-                   txt_tae.setText("4%");
+                   txt_tin.setText("2");
+                   txt_tae.setText("4");
                } else {
-                   txt_tin.setText("3%");
-                   txt_tae.setText("5%");
+                   txt_tin.setText("3");
+                   txt_tae.setText("5");
                }
 
             }
@@ -82,7 +83,22 @@ public void calcular(View v)
             Toast.makeText(this, "Cantidad MIN = 30.000 - Cantidad MAX = 500.000", Toast.LENGTH_SHORT).show();
             Toast.makeText(this, "Cuotas MIN = 60 - Cuotas MAX = 360", Toast.LENGTH_SHORT).show();
         } else {
-            //code change
+
+          String tin_str = (String) txt_tin.getText();
+          int tin_int = Integer.parseInt(tin_str);
+          String cant_user = String.valueOf(ed_txt_cant.getText());
+          int cant_int = Integer.parseInt(cant_user);
+          String cuot_user = String.valueOf(ed_txt_cuot.getText());
+          int cuot_int = Integer.parseInt(cuot_user);
+
+            Intent i = new Intent(this, Prueba_migraDatos.class);
+
+            i.putExtra("cantidad", cant_user);
+            i.putExtra("cuota", cuot_user);
+            i.putExtra("tin", tin_str);
+
+            startActivity(i);
+
         }
     } else {
         //Toast.makeText(this, "Prestamo personal", Toast.LENGTH_SHORT).show();
@@ -92,7 +108,22 @@ public void calcular(View v)
             Toast.makeText(this, "Cantidad MIN = 3.000 - Cantidad MAX = 20.000", Toast.LENGTH_SHORT).show();
             Toast.makeText(this, "Cuotas MIN = 12 - Cuotas MAX = 84", Toast.LENGTH_SHORT).show();
         } else {
-            //code change
+
+            String tin_str = (String) txt_tin.getText();
+            int tin_int = Integer.parseInt(tin_str);
+            String cant_user = String.valueOf(ed_txt_cant.getText());
+            int cant_int = Integer.parseInt(cant_user);
+            String cuot_user = String.valueOf(ed_txt_cuot.getText());
+            int cuot_int = Integer.parseInt(cuot_user);
+
+            Intent i = new Intent(this, Prueba_migraDatos.class);
+
+            i.putExtra("cantidad", cant_user);
+            i.putExtra("cuota", cuot_user);
+            i.putExtra("tin", tin_str);
+
+            startActivity(i);
+
         }
     }
  }
