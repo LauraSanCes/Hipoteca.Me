@@ -24,11 +24,7 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
 {
 
 
-  /* static double num;
-   static double num2;
-  static double resul;
 
-   */
   static JSONArray jsonArrayRates = new JSONArray();
 
 
@@ -68,7 +64,6 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
 
             JSONObject respuestaRates= (JSONObject) jsonArrayResponse.get(2);
             Iterator j = respuestaRates.keys();
-           // JSONArray jsonArrayRates = new JSONArray();
 
 
             while (j.hasNext())
@@ -76,27 +71,6 @@ public class DowloadTask extends AsyncTask<String, Void, Void>
                 String key = (String) j.next();
                 jsonArrayRates.put(respuestaRates.get(key));
             }
-/*
-           for (int k = 0; k < jsonArrayRates.length() ; k++)
-            {
-              System.out.println(jsonArrayRates.get(k));
-
-                //System.out.println(resul);
-
-              //double num = (double) jsonArrayRates.get(k);
-
-
-               /* num = (double) jsonArrayRates.get(1);
-                num2 = 2F;
-
-                */
-
-           // }
-
-           /* resul =  num * num2;
-            System.out.println(resul);
-
-            */
 
         }
         catch (IOException | JSONException e)
