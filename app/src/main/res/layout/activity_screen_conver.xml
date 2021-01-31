@@ -31,7 +31,7 @@
         android:layout_marginRight="21dp"
         android:ems="10"
         android:gravity="center"
-        android:inputType="number"
+        android:inputType="numberDecimal|numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/drop_from"
