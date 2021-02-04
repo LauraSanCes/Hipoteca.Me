@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -91,7 +90,7 @@ public void calcular(View v)
           String cuot_user = String.valueOf(ed_txt_cuot.getText());
           int cuot_int = Integer.parseInt(cuot_user);
 
-            Intent i = new Intent(this, Prueba_migraDatos.class);
+            Intent i = new Intent(this, MainActivity_AdpPrs.class);
 
             i.putExtra("cantidad", cant_user);
             i.putExtra("cuota", cuot_user);
@@ -116,7 +115,7 @@ public void calcular(View v)
             String cuot_user = String.valueOf(ed_txt_cuot.getText());
             int cuot_int = Integer.parseInt(cuot_user);
 
-            Intent i = new Intent(this, Prueba_migraDatos.class);
+            Intent i = new Intent(this, MainActivity_AdpPrs.class);
 
             i.putExtra("cantidad", cant_user);
             i.putExtra("cuota", cuot_user);

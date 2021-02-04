@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Prueba_migraDatos extends AppCompatActivity {
+import java.text.DecimalFormat;
+
+public class MainActivity_AdpPrs extends AppCompatActivity {
 
     TextView cant_migr, cuot_migr, tin_migr;
 
@@ -16,9 +18,6 @@ public class Prueba_migraDatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba_migra_datos);
 
-        cant_migr = findViewById(R.id.tv_cant);
-        cuot_migr = findViewById(R.id.tv_cuot);
-        tin_migr = findViewById(R.id.tv_tin);
 
         Intent i = getIntent();
 
@@ -27,9 +26,16 @@ public class Prueba_migraDatos extends AppCompatActivity {
         String tin_migrado =  i.getStringExtra("tin");
 
 
-        cant_migr.setText(cantidad_migrada);
-        cuot_migr.setText(cuota_migrada);
-        tin_migr.setText(tin_migrado);
+        int cantidad = Integer.parseInt(cantidad_migrada);
+        int cuota = Integer.parseInt(cuota_migrada);
+        int tin = Integer.parseInt(tin_migrado);
+
+        double interes = ((tin/100f)/12);
+
+        DecimalFormat form = new DecimalFormat("0.00");
+
+        
+
 
 
 

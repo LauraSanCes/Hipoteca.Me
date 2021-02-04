@@ -5,45 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_screens"
-    tools:context=".Prueba_migraDatos">
-
-    <TextView
-        android:id="@+id/tv_cant"
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="55dp"
-        android:gravity="center"
-        android:hint="Cantidad Migrada"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_cuot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_cuot"
-        android:layout_width="162dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:hint="Cuotas Migradas"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_tin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cant" />
-
-    <TextView
-        android:id="@+id/tv_tin"
-        android:layout_width="161dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="242dp"
-        android:gravity="center"
-        android:hint="TIN"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cuot" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".MainActivity_AdpPrs" />
