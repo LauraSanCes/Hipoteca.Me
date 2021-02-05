@@ -100,7 +100,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -114,7 +115,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -128,7 +130,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -142,7 +145,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -156,7 +160,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -170,7 +175,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -184,7 +190,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -198,7 +205,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -212,7 +220,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -226,7 +235,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -240,7 +250,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -254,7 +265,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty())
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
                         origen.setSelection(0);
                     }
                     else
@@ -288,7 +300,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -303,7 +316,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -318,7 +332,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -334,7 +349,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -349,7 +365,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -364,7 +381,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -379,7 +397,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -394,7 +413,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -410,7 +430,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -425,7 +446,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -441,7 +463,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else
@@ -456,7 +479,8 @@ public class Screen_conver extends AppCompatActivity
                 {
                     if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
                     {
-                        Toast.makeText(context, "¡ERROR! Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y además, elegir la moneda", Toast.LENGTH_SHORT).show();
                         end.setSelection(0);
                     }
                     else

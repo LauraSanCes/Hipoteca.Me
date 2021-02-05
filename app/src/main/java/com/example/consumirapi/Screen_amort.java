@@ -18,6 +18,8 @@ public class Screen_amort extends AppCompatActivity {
     TextView txt_tin, txt_tae;
     EditText ed_txt_cant, ed_txt_cuot;
 
+    int cantidad, cuotas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +40,7 @@ public class Screen_amort extends AppCompatActivity {
         spinner_select.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // get selected item and assign to textview
-                // ex: textView.setText(spinner.getSelectedItem().toString());
+
 
                if (spinner_select.getSelectedItemPosition() == 0)
                {
@@ -54,7 +55,7 @@ public class Screen_amort extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // handle if you'd like to
+
             }
         });
 
@@ -64,18 +65,32 @@ public class Screen_amort extends AppCompatActivity {
 public void calcular(View v)
 {
 
-    String cantidad_txt = ed_txt_cant.getText().toString();
+    if(ed_txt_cant.getText().toString().isEmpty())
+    {
+        Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "¡Campo cantidad vacío!", Toast.LENGTH_SHORT).show();
+    }
+    else
+    {
+        String cantidad_txt = ed_txt_cant.getText().toString();
 
-    int cantidad = Integer.parseInt(cantidad_txt);
+         cantidad = Integer.parseInt(cantidad_txt);
+    }
 
-   String cuotas_txt = ed_txt_cuot.getText().toString();
+    if (ed_txt_cuot.getText().toString().isEmpty())
+    {
+        Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "¡Campo cuotas vacío!", Toast.LENGTH_SHORT).show();
+    }
+    else
+    {
+        String cuotas_txt = ed_txt_cuot.getText().toString();
 
-   int cuotas = Integer.parseInt(cuotas_txt);
-
+         cuotas = Integer.parseInt(cuotas_txt);
+    }
 
 
     if (spinner_select.getSelectedItemPosition() == 0) {
-        //Toast.makeText(this, "Prestamo hipotecario", Toast.LENGTH_SHORT).show();
 
         if ((cantidad < 30000 || cantidad > 500000) || (cuotas < 60 || cuotas > 360)) {
             Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
@@ -100,7 +115,6 @@ public void calcular(View v)
 
         }
     } else {
-        //Toast.makeText(this, "Prestamo personal", Toast.LENGTH_SHORT).show();
 
         if ((cantidad < 3000 || cantidad > 20000) || (cuotas < 12 || cuotas > 84)) {
             Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
