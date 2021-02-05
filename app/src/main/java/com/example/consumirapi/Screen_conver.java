@@ -10,13 +10,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.json.JSONException;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Screen_conver extends AppCompatActivity
 {
+
+    static DecimalFormat form = new DecimalFormat("0.00");
 
     static EditText txt_result;
     static EditText txt_intro;
@@ -103,89 +107,178 @@ public class Screen_conver extends AppCompatActivity
                 }
                 else if (origen.getSelectedItemPosition() == 1)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (int) valores.get(0);
-
-
-                    //txt_intro.setText("12");
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                    {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (int) valores.get(0);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 2)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(1);
-                   // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                    {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(1);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 3)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(2);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(2);
+
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 4)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(3);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(3);
+                    }
+
                 }
                 else if(origen.getSelectedItemPosition() == 5)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(4);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(4);
+                    }
+
                 }
                 else if(origen.getSelectedItemPosition() == 6)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(5);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(5);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 7)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(6);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(6);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 8)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(7);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(7);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 9)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(8);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(8);
+
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 10)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(9);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(9);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 11)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(10);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(10);
+                    }
                 }
                 else if(origen.getSelectedItemPosition() == 12)
                 {
-                    moneda = txt_intro.getText().toString();
-                    cantidad = Double.parseDouble(moneda);
-                    Primercalculo = cantidad / (double) valores.get(11);
-                    // System.out.println(Primercalculo);
+                    if (txt_intro.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir", Toast.LENGTH_SHORT).show();
+                        origen.setSelection(0);
+                    }
+                    else
+                        {
+                        moneda = txt_intro.getText().toString();
+                        cantidad = Double.parseDouble(moneda);
+                        Primercalculo = cantidad / (double) valores.get(11);
+                    }
+
                 }
 
 
@@ -214,101 +307,199 @@ public class Screen_conver extends AppCompatActivity
 
                else if (end.getSelectedItemPosition() == 1)
                 {
-                    Segundocalculo = Primercalculo * (int) valores.get(0);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
+                        Segundocalculo = Primercalculo * (int) valores.get(0);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
                 }
                 else if(end.getSelectedItemPosition() == 2)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(1);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(1);
+                            double absolute_resul = Math.abs(Segundocalculo);
+                            String resul_final_fixed = form.format(absolute_resul);
+                            txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 3)
                 {
-
-                    Segundocalculo = Primercalculo * (double) valores.get(2);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
+                        Segundocalculo = Primercalculo * (double) valores.get(2);
+                            double absolute_resul = Math.abs(Segundocalculo);
+                            String resul_final_fixed = form.format(absolute_resul);
+                            txt_result.setText(resul_final_fixed);
+                    }
 
                 }
 
                 else if(end.getSelectedItemPosition() == 4)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(3);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(3);
+                            double absolute_resul = Math.abs(Segundocalculo);
+                            String resul_final_fixed = form.format(absolute_resul);
+                            txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 5)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(4);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
-
+                        Segundocalculo = Primercalculo * (double) valores.get(4);
+                            double absolute_resul = Math.abs(Segundocalculo);
+                            String resul_final_fixed = form.format(absolute_resul);
+                            txt_result.setText(resul_final_fixed);
+                    }
                 }
                 else if(end.getSelectedItemPosition() == 6)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(5);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(5);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 7)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(6);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(6);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 8)
                 {
-
-                    Segundocalculo = Primercalculo * (double) valores.get(7);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
+                        Segundocalculo = Primercalculo * (double) valores.get(7);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
 
                 }
 
                 else if(end.getSelectedItemPosition() == 9)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else
+                        {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(8);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(8);
+                            double absolute_resul = Math.abs(Segundocalculo);
+                            String resul_final_fixed = form.format(absolute_resul);
+                            txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 10)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(9);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(9);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
 
                 }
 
                 else if(end.getSelectedItemPosition() == 11)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(10);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
+                        Segundocalculo = Primercalculo * (double) valores.get(10);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
 
                 }
                 else if(end.getSelectedItemPosition() == 12)
                 {
+                    if (txt_intro.getText().toString().isEmpty() || origen.getSelectedItemPosition() == 0 )
+                    {
+                        Toast.makeText(context, "Debes poner primero la cantidad que deseas convertir y ademas elegir el valor de la moneda", Toast.LENGTH_SHORT).show();
+                        end.setSelection(0);
+                    }
+                    else {
 
-                    Segundocalculo = Primercalculo * (double) valores.get(11);
-                    // System.out.println(Segundocalculo);
-                    txt_result.setText(String.valueOf(Segundocalculo));
-
+                        Segundocalculo = Primercalculo * (double) valores.get(11);
+                        double absolute_resul = Math.abs(Segundocalculo);
+                        String resul_final_fixed = form.format(absolute_resul);
+                        txt_result.setText(resul_final_fixed);
+                    }
                 }
-
             }
 
             @Override
