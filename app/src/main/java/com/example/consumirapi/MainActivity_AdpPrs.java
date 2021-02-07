@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class MainActivity_AdpPrs extends AppCompatActivity {
 
+    double aux;
+
     ListView listView;
 
     ArrayList<Item_fila> registros = new ArrayList<>();
@@ -51,14 +53,7 @@ public class MainActivity_AdpPrs extends AppCompatActivity {
         {
             //---------------------CUOTAS----------------------\\
 
-            double unoMasIElevadoAN = Math.pow((1 + interes), cuotas);
-
-            double numerador = interes * unoMasIElevadoAN;
-            double denominador = unoMasIElevadoAN - 1;
-
-            cuotaFija = cantidad * (numerador / denominador);
-
-           //double cuotaFijaFinal = cuotaFija/cuotas;
+            cuotaFija = cantidad/cuotas+1;
 
             String cuota_fixed = form.format(cuotaFija);
 
@@ -72,13 +67,16 @@ public class MainActivity_AdpPrs extends AppCompatActivity {
 
             capitalPendiente = capitalPendiente - cuotaFija;
 
-            if(capitalPendiente < cuotaFija)
+            if(j == cuotas - 1)
             {
-                capitalPendiente = capitalPendiente;
-                if(capitalPendiente < 0)
-                {
-                    capitalPendiente = 0;
-                }
+                aux = capitalPendiente;
+            }
+
+            if (j == cuotas)
+            {
+                cuotaFija = aux;
+                cuota_fixed = form.format(cuotaFija);
+                capitalPendiente = 0;
             }
 
             String cap_pend_fixed = form.format(capitalPendiente);
