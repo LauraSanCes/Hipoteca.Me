@@ -39,7 +39,13 @@ public class Screen_calculadora extends AppCompatActivity
         btnNueve = findViewById(R.id.Nueve);
         btnSuma = findViewById(R.id.Suma);
         btnResta = findViewById(R.id.Resta);
-
+        btnMultiplica = findViewById(R.id.Multiplica);
+        btnDivide = findViewById(R.id.Divide);
+        btnClean = findViewById(R.id.Clean);
+        btnBorrar = findViewById(R.id.Borrar);
+        Resultado = findViewById(R.id.Etiqueta);
+        btnPunto = findViewById(R.id.Punto);
+        btnIgual = findViewById(R.id.Igual);
 
 
 
