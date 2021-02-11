@@ -166,10 +166,112 @@ public class Screen_calculadora extends AppCompatActivity
             }
         });
 
+        btnPunto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mostrar = Resultado.getText().toString();
 
+                if(mostrar.contains("."))
+                {
+                    //Do Nothing
+                } else {
+                    mostrar = mostrar + ".";
+                    Resultado.setText(mostrar);
+                }
+            }
+        });
 
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mostrar = "";
+                Resultado.setText(mostrar);
+                reserva = "";
+                operador = "";
+            }
+        });
 
+        btnBorrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mostrar = Resultado.getText().toString();
+                if(mostrar.isEmpty())
+                {
+                    //Do Nothing
+                } else {
+                    mostrar = mostrar.substring(0, mostrar.length() - 1);
+                    Resultado.setText(mostrar);
+                }
+            }
+        });
 
+        btnIgual.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mostrar = "";
+                mostrar = Resultado.getText().toString();
+                mostrar = mostrar + "";
 
+                if (mostrar == "")
+                {
+                    Toast.makeText(Screen_calculadora.this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    if(operador.equals(""))
+                    {
+                        //Do Nothing
+                    }
+
+                    if (operador.equals("-"))
+                    {
+                        if (Resultado.getText().toString().equals("-"))
+                        {
+                            Toast.makeText(Screen_calculadora.this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            resultado = Double.parseDouble(reserva) - -(Double.parseDouble(Resultado.getText().toString()));
+                            Resultado.setText(String.valueOf(resultado));
+                        }
+                    }
+
+                    if (operador.equals("+"))
+                    {
+                        if (Resultado.getText().toString().isEmpty())
+                        {
+                            Toast.makeText(Screen_calculadora.this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            resultado = Double.parseDouble(reserva) + Double.parseDouble(Resultado.getText().toString());
+                            Resultado.setText(String.valueOf(resultado));
+                        }
+                    }
+
+                    if (operador.equals("/"))
+                    {
+                        if (Resultado.getText().toString().isEmpty())
+                        {
+                            Toast.makeText(Screen_calculadora.this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            resultado = Double.parseDouble(reserva) / Double.parseDouble(Resultado.getText().toString());
+                            Resultado.setText(String.valueOf(resultado));
+                        }
+                    }
+
+                    if (operador.equals("*"))
+                    {
+                        if (Resultado.getText().toString().isEmpty())
+                        {
+                            Toast.makeText(Screen_calculadora.this, "¡ERROR!", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            resultado = Double.parseDouble(reserva) * Double.parseDouble(Resultado.getText().toString());
+                            Resultado.setText(String.valueOf(resultado));
+                        }
+                    }
+                }
+            }
+        });
     }
 }
