@@ -1,11 +1,14 @@
-package com.example.consumirapi;
+package com.example.consumirapi.screen_amort;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.example.consumirapi.R;
+import com.example.consumirapi.screen_amort.AdapterPersn;
+import com.example.consumirapi.screen_amort.Item_fila;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

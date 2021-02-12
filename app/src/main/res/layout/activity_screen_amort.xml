@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_screens"
-    tools:context=".Screen_amort">
+    tools:context=".screen_amort.Screen_amort">
 
     <ImageView
         android:id="@+id/imageView6"

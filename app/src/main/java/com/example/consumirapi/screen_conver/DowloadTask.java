@@ -1,9 +1,7 @@
-package com.example.consumirapi;
+package com.example.consumirapi.screen_conver;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 
@@ -16,8 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class DowloadTask extends AsyncTask<String, Void, Void>

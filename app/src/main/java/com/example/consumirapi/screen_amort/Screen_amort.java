@@ -1,4 +1,4 @@
-package com.example.consumirapi;
+package com.example.consumirapi.screen_amort;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.consumirapi.R;
 
 public class Screen_amort extends AppCompatActivity {
 

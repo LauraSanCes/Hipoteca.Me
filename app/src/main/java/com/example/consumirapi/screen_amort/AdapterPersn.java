@@ -1,4 +1,4 @@
-package com.example.consumirapi;
+package com.example.consumirapi.screen_amort;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.consumirapi.R;
 
 import java.util.ArrayList;
 
