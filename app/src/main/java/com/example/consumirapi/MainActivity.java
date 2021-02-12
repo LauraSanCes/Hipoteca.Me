@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.consumirapi.screen_amort.Screen_amort;
+import com.example.consumirapi.screen_catalogo.Screen_catalogo;
 import com.example.consumirapi.screen_conver.Screen_conver;
 
 public class MainActivity extends AppCompatActivity
@@ -47,6 +48,13 @@ public class MainActivity extends AppCompatActivity
     public void onClickCalc(View v)
     {
         Intent i = new Intent(this, Screen_calculadora.class);
+
+        startActivity(i);
+    }
+
+    public void onClickCatalog(View v)
+    {
+        Intent i = new Intent(this, Screen_catalogo.class);
 
         startActivity(i);
     }

@@ -45,7 +45,7 @@ public class AdapterPersn extends BaseAdapter
     {
 
 
-        convertView = LayoutInflater.from(context).inflate(R.layout.activity_item_fila, null);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_fila, null);
 
         TextView pkmID = convertView.findViewById(R.id.txt_view_id);
         TextView pkmCUOTA_CONST = convertView.findViewById(R.id.txt_view_result);

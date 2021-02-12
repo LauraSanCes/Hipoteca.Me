@@ -12,7 +12,7 @@ import com.example.consumirapi.R;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
-public class AdapterPersn
+public class AdapterPersn extends BaseAdapter
 {
     ArrayList<Item_casa> casaList;
     Context context;
@@ -43,7 +43,7 @@ public class AdapterPersn
     public View getView(int position, View convertView, ViewGroup parent)
     {
         Item_casa casa = (Item_casa) getItem(position);
-        convertView = LayoutInflater.from(context).inflate(R.layout.item_list, null);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item_casa, null);
         ImageView casaImage = convertView.findViewById(R.id.casa_imag);
         TextView casaNombre = convertView.findViewById(R.id.casa_name);
         TextView casaPrecio = convertView.findViewById(R.id.casa_price);
