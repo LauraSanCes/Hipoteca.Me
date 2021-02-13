@@ -1,8 +1,10 @@
-package com.example.consumirapi;
+package com.example.consumirapi.screen_credits;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.consumirapi.R;
 
 public class Screen_credits extends AppCompatActivity {
 

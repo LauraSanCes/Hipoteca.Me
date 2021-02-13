@@ -11,13 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen_catalogo.Screen_catalogo"></activity>
+        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".screen_catalogo.Screen_catalogo" />
         <activity android:name=".screen_amort.Item_fila" />
         <activity android:name=".screen_amort.MainActivity_AdpPrs" />
         <activity android:name=".screen_amort.Screen_amort" />
-        <activity android:name=".Screen_calculadora" />
+        <activity android:name=".screen_calculadora.Screen_calculadora" />
         <activity android:name=".screen_conver.Screen_conver" />
-        <activity android:name=".Screen_credits" />
+        <activity android:name=".screen_credits.Screen_credits" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

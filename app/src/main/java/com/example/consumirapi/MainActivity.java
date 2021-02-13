@@ -1,20 +1,20 @@
 package com.example.consumirapi;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import com.example.consumirapi.screen_amort.Screen_amort;
+import com.example.consumirapi.screen_calculadora.Screen_calculadora;
 import com.example.consumirapi.screen_catalogo.Screen_catalogo;
 import com.example.consumirapi.screen_conver.Screen_conver;
+import com.example.consumirapi.screen_credits.Screen_credits;
 
 public class MainActivity extends AppCompatActivity
 {
 
-    Button amort, conversor, calculadora, exit, creditos;
+    Button herramientas, exit, creditos;
 
 
     @Override
@@ -23,31 +23,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        amort = findViewById(R.id.btn_amort);
-        conversor = findViewById(R.id.btn_conver);
-        calculadora = findViewById(R.id.btn_calc);
+        herramientas = findViewById(R.id.tools);
         exit = findViewById(R.id.btn_exit);
         creditos = findViewById(R.id.btn_cred);
     }
 
-
-   public void onClickAmort(View v)
-   {
-       Intent i = new Intent(this, Screen_amort.class);
-
-       startActivity(i);
-   }
-
-    public void onClickConver(View v)
+    public void onClickTools(View v)
     {
-        Intent i = new Intent(this, Screen_conver.class);
-
-        startActivity(i);
-    }
-
-    public void onClickCalc(View v)
-    {
-        Intent i = new Intent(this, Screen_calculadora.class);
+        Intent i = new Intent(this, MainActivity2.class);
 
         startActivity(i);
     }
