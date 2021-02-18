@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".screen_curiosity.Screen_numbers"></activity>
+        <activity android:name=".screen_curiosity.MainActivity_Curiosity" />
+        <activity android:name=".MainActivity2" />
         <activity android:name=".screen_catalogo.Screen_catalogo" />
         <activity android:name=".screen_amort.Item_fila" />
         <activity android:name=".screen_amort.MainActivity_AdpPrs" />

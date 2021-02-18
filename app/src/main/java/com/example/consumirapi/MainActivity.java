@@ -10,6 +10,8 @@ import com.example.consumirapi.screen_calculadora.Screen_calculadora;
 import com.example.consumirapi.screen_catalogo.Screen_catalogo;
 import com.example.consumirapi.screen_conver.Screen_conver;
 import com.example.consumirapi.screen_credits.Screen_credits;
+import com.example.consumirapi.screen_curiosity.MainActivity_Curiosity;
+import com.example.consumirapi.screen_curiosity.Screen_numbers;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -37,7 +39,14 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickCatalog(View v)
     {
-        Intent i = new Intent(this, Screen_catalogo.class);
+    Intent i = new Intent(this, Screen_catalogo.class);
+
+    startActivity(i);
+    }
+
+    public void onClickCuriosity(View v)
+    {
+        Intent i = new Intent(this, MainActivity_Curiosity.class);
 
         startActivity(i);
     }
