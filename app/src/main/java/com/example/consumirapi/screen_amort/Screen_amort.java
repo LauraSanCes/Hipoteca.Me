@@ -94,10 +94,10 @@ public void calcular(View v)
 
     if (spinner_select.getSelectedItemPosition() == 0) {
 
-        if ((cantidad < 30000 || cantidad > 500000) || (cuotas < 60 || cuotas > 360)) {
+        if ((cantidad < 50000 || cantidad > 1000000) || (cuotas < 30 || cuotas > 400)) {
             Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "Cantidad MIN = 30.000 - Cantidad MAX = 500.000", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "Cuotas MIN = 60 - Cuotas MAX = 360", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cantidad MIN = 50.000 - Cantidad MAX = 1.000.000", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cuotas MIN = 30 - Cuotas MAX = 400", Toast.LENGTH_SHORT).show();
         } else {
 
           String tin_str = (String) txt_tin.getText();
@@ -118,10 +118,10 @@ public void calcular(View v)
         }
     } else {
 
-        if ((cantidad < 3000 || cantidad > 20000) || (cuotas < 12 || cuotas > 84)) {
+        if ((cantidad < 1000 || cantidad > 50000) || (cuotas < 10 || cuotas > 70)) {
             Toast.makeText(this, "¡ERROR!", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "Cantidad MIN = 3.000 - Cantidad MAX = 20.000", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "Cuotas MIN = 12 - Cuotas MAX = 84", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cantidad MIN = 1.000 - Cantidad MAX = 50.000", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Cuotas MIN = 10 - Cuotas MAX = 70", Toast.LENGTH_SHORT).show();
         } else {
 
             String tin_str = (String) txt_tin.getText();
