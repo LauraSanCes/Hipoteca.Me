@@ -10,8 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.consumirapi.R;
 
-
-
 public class Screen_numbers extends AppCompatActivity
 {
     Button obtener;
@@ -32,7 +30,7 @@ public class Screen_numbers extends AppCompatActivity
         numeros = number.getText();
     }
 
-    public void obtenerCuriosidad(View v)
+    public void obtenerCuriosidadNumbers(View v)
     {
         if(number.getText().toString().isEmpty())
         {
@@ -45,13 +43,8 @@ public class Screen_numbers extends AppCompatActivity
             task.execute("https://numbersapi.p.rapidapi.com/" + numeros + "/math?fragment=true&json=true");
         }
     }
-
-
     static void methodNumbers()
     {
         curiosity.setText(DownloadTaskNumbers.respuestaResponseNumbers);
     }
-
-
-
 }

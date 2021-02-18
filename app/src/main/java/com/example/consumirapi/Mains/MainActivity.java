@@ -1,17 +1,15 @@
-package com.example.consumirapi;
+package com.example.consumirapi.Mains;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.example.consumirapi.screen_amort.Screen_amort;
-import com.example.consumirapi.screen_calculadora.Screen_calculadora;
+
+import com.example.consumirapi.R;
 import com.example.consumirapi.screen_catalogo.Screen_catalogo;
-import com.example.consumirapi.screen_conver.Screen_conver;
 import com.example.consumirapi.screen_credits.Screen_credits;
 import com.example.consumirapi.screen_curiosity.MainActivity_Curiosity;
-import com.example.consumirapi.screen_curiosity.Screen_numbers;
 
 public class MainActivity extends AppCompatActivity
 {

@@ -8,9 +8,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
 
-public class DownloadTaskNumbers extends AsyncTask<String, Void, Void>
+public class DownloadTaskYears extends AsyncTask<String, Void, Void>
 {
-    static String respuestaResponseNumbers;
+    static String respuestaResponseYears;
 
     @Override
     protected Void doInBackground(String... endPoint)
@@ -28,7 +28,7 @@ public class DownloadTaskNumbers extends AsyncTask<String, Void, Void>
             Response response = client.newCall(request).execute();
             String jsonData = response.body().string();
             JSONObject json = new JSONObject(jsonData);
-            respuestaResponseNumbers = (String) json.get("text");
+            respuestaResponseYears = (String) json.get("text");
         }
         catch (IOException | JSONException e)
         {
@@ -41,7 +41,6 @@ public class DownloadTaskNumbers extends AsyncTask<String, Void, Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
-       Screen_numbers.methodNumbers();
+        Screen_years.methodYears();
     }
 }
-

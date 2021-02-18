@@ -27,16 +27,16 @@ public class MainActivity_Curiosity extends AppCompatActivity
     public void years(View v)
 
     {
-        //Intent i = new Intent(this, Years.class);
+        Intent i = new Intent(this, Screen_years.class);
 
-      //  startActivity(i);
+        startActivity(i);
     }
 
     public void dates(View v)
     {
-       // Intent i = new Intent(this, Dates.class);
+        Intent i = new Intent(this, Screen_dates.class);
 
-      //  startActivity(i);
+        startActivity(i);
     }
 
 }

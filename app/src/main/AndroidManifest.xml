@@ -11,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen_curiosity.Screen_numbers"></activity>
+        <activity android:name=".screen_curiosity.Screen_dates"></activity>
+        <activity android:name=".screen_curiosity.Screen_years" />
+        <activity android:name=".screen_curiosity.Screen_numbers" />
         <activity android:name=".screen_curiosity.MainActivity_Curiosity" />
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".Mains.MainActivity2" />
         <activity android:name=".screen_catalogo.Screen_catalogo" />
         <activity android:name=".screen_amort.Item_fila" />
         <activity android:name=".screen_amort.MainActivity_AdpPrs" />
@@ -21,7 +23,7 @@
         <activity android:name=".screen_calculadora.Screen_calculadora" />
         <activity android:name=".screen_conver.Screen_conver" />
         <activity android:name=".screen_credits.Screen_credits" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Mains.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
