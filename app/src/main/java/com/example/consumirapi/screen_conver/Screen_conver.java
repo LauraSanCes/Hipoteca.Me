@@ -296,7 +296,7 @@ public class Screen_conver extends AppCompatActivity
 
                 if (end.getSelectedItemPosition() == 0)
                 {
-                    txt_result.setText("0");
+                    txt_result.setText("");
                 }
 
                else if (end.getSelectedItemPosition() == 1)
@@ -506,5 +506,13 @@ public class Screen_conver extends AppCompatActivity
         Intent i = new Intent(this, Screen_info.class);
 
         startActivity(i);
+    }
+
+    public void clean(View v)
+    {
+        txt_intro.setText("");
+        txt_result.setText("");
+        origen.setSelection(0);
+        end.setSelection(0);
     }
 }

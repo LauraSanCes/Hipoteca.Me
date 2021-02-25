@@ -118,6 +118,7 @@
         android:layout_marginEnd="37dp"
         android:layout_marginRight="37dp"
         android:layout_marginBottom="58dp"
+        android:onClick="clean"
         android:text="Limpiar Campos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"

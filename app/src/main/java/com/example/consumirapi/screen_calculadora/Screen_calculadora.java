@@ -9,9 +9,13 @@ import android.widget.Toast;
 
 import com.example.consumirapi.R;
 
+import java.text.DecimalFormat;
+
 
 public class Screen_calculadora extends AppCompatActivity
 {
+    static DecimalFormat form = new DecimalFormat("0.00");
+
     Button btnCero, btnUno, btnDos, btnTres, btnCuatro, btnCinco, btnSeis, btnSiete, btnOcho, btnNueve,
             btnSuma, btnResta, btnMultiplica, btnDivide, btnClean, btnBorrar, btnPunto, btnIgual;
 
@@ -256,7 +260,8 @@ public class Screen_calculadora extends AppCompatActivity
                         else
                         {
                             resultado = Double.parseDouble(reserva) / Double.parseDouble(Resultado.getText().toString());
-                            Resultado.setText(String.valueOf(resultado));
+                            String resul_final_fixed = form.format(resultado);
+                            Resultado.setText(resul_final_fixed);
                         }
                     }
 
