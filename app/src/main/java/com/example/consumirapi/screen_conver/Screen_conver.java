@@ -3,6 +3,7 @@ package com.example.consumirapi.screen_conver;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.consumirapi.Mains.MainActivity2;
 import com.example.consumirapi.R;
 
 import org.json.JSONException;
@@ -497,5 +499,12 @@ public class Screen_conver extends AppCompatActivity
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
+    }
+
+    public void onClickInfo(View v)
+    {
+        Intent i = new Intent(this, Screen_info.class);
+
+        startActivity(i);
     }
 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen_curiosity.Screen_dates"></activity>
+        <activity android:name=".screen_conver.Screen_info"></activity>
+        <activity android:name=".screen_curiosity.Screen_dates" />
         <activity android:name=".screen_curiosity.Screen_years" />
         <activity android:name=".screen_curiosity.Screen_numbers" />
         <activity android:name=".screen_curiosity.MainActivity_Curiosity" />
