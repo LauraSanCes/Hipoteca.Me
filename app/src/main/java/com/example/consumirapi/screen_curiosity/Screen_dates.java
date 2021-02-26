@@ -38,10 +38,8 @@ public class Screen_dates extends AppCompatActivity {
     {
 
         String dia_user = dia.getText().toString();
-        int dia_user_int = Integer.parseInt(dia_user);
 
         String mes_user = mes.getText().toString();
-        int mes_user_int = Integer.parseInt(mes_user);
 
 
         if (dia.getText().toString().isEmpty() || mes.getText().toString().isEmpty() )
@@ -51,6 +49,9 @@ public class Screen_dates extends AppCompatActivity {
         }
         else
         {
+            int dia_user_int = Integer.parseInt(dia_user);
+            int mes_user_int = Integer.parseInt(mes_user);
+
             if((dia_user_int > 30 || dia_user_int < 1 ) || (mes_user_int > 12 || mes_user_int < 1) || (dia_user_int == 30 && mes_user_int == 2) )
             {
                 Toast.makeText(this, "¡ERROR! Día o mes inválido", Toast.LENGTH_SHORT).show();
