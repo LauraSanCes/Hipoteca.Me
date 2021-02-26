@@ -11,10 +11,10 @@
 
     <TextView
         android:id="@+id/Etiqueta"
-        android:layout_width="match_parent"
-        android:layout_height="114dp"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/gridLayout"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="117dp"
         android:height="100dp"
         android:gravity="center|end"
         android:textAlignment="textEnd"
