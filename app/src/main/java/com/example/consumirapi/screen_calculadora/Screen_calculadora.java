@@ -145,14 +145,19 @@ public class Screen_calculadora extends AppCompatActivity
                 reserva = Resultado.getText().toString();
                 operador = "+";
                 Resultado.setText("");
+
+                btnSuma.setEnabled(false);
             }
         });
 
         btnResta.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 reserva = Resultado.getText().toString();
+                mostrar = Resultado.getText().toString();
                 operador = "-";
                 Resultado.setText("-");
+
+                btnResta.setEnabled(false);
             }
         });
 
@@ -161,6 +166,8 @@ public class Screen_calculadora extends AppCompatActivity
                 reserva = Resultado.getText().toString();
                 operador = "*";
                 Resultado.setText("");
+
+                btnMultiplica.setEnabled(false);
             }
         });
 
@@ -169,6 +176,8 @@ public class Screen_calculadora extends AppCompatActivity
                 reserva = Resultado.getText().toString();
                 operador = "/";
                 Resultado.setText("");
+
+                btnDivide.setEnabled(false);
             }
         });
 
@@ -235,6 +244,7 @@ public class Screen_calculadora extends AppCompatActivity
                         {
                             resultado = Double.parseDouble(reserva) - -(Double.parseDouble(Resultado.getText().toString()));
                             Resultado.setText(String.valueOf(resultado));
+                            btnResta.setEnabled(true);
                         }
                     }
 
@@ -248,6 +258,7 @@ public class Screen_calculadora extends AppCompatActivity
                         {
                             resultado = Double.parseDouble(reserva) + Double.parseDouble(Resultado.getText().toString());
                             Resultado.setText(String.valueOf(resultado));
+                            btnSuma.setEnabled(true);
                         }
                     }
 
@@ -262,6 +273,7 @@ public class Screen_calculadora extends AppCompatActivity
                             resultado = Double.parseDouble(reserva) / Double.parseDouble(Resultado.getText().toString());
                             String resul_final_fixed = form.format(resultado);
                             Resultado.setText(resul_final_fixed);
+                            btnDivide.setEnabled(true);
                         }
                     }
 
@@ -275,6 +287,7 @@ public class Screen_calculadora extends AppCompatActivity
                         {
                             resultado = Double.parseDouble(reserva) * Double.parseDouble(Resultado.getText().toString());
                             Resultado.setText(String.valueOf(resultado));
+                            btnMultiplica.setEnabled(true);
                         }
                     }
                 }
